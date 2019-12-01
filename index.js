@@ -3,15 +3,11 @@ const bodyParser = require('body-parser')
 const path = require('path')
 
 const port = '8380'
-const messagePort = `Server started on http://localhost: ${port} `
+const messagePort = `Server started on http://localhost: ${port}`
 
 const app = express()
 
 const pathClient = 'views/'
-
-app.set('view engine', 'ejs')
-app.set(pathClient, path.join(__dirname, pathClient))
-
 
 app.use(bodyParser.json())
 
@@ -22,7 +18,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static(path.join(__dirname, pathClient)))
 
 app.get('/', (req, res) => {
-    res.send("HELLO")
+    res.send(index)
 })
 
 app.listen(port, function () {
