@@ -1,0 +1,28 @@
+{
+  "name": "aco-gui",
+  "version": "1.0.0",
+  "description": "Ant Colony optimization, but has an interface to make easier to set up and test. Designed for teaching purposes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ljcruz709/ACO-GUI.git"
+  },
+  "keywords": [
+    "graph",
+    "metaheuristic",
+    "ant",
+    "colony"
+  ],
+  "author": "Leonardo Joel & Ester Uscanga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ljcruz709/ACO-GUI/issues"
+  },
+  "homepage": "https://github.com/ljcruz709/ACO-GUI#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
