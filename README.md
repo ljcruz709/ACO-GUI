@@ -14,3 +14,8 @@ Run the server file in order to use the GUI
 ```
 node index.js
 ```
+Open at 
+
+```
+http://localhost:8380/
+```
