@@ -4,18 +4,16 @@ Ant Colony Optimization, but has an interface to make easier to set up and test.
 # Instructions
 
 Install the npm packages
-
 ```
 npm install
 ```
 
 Run the server file in order to use the GUI
-
 ```
 node index.js
 ```
-Open at 
 
+Open in browser at 
 ```
 http://localhost:8380/
 ```
