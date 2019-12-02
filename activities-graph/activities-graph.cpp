@@ -19,7 +19,7 @@ int main()
 	std::vector<edge> edges;
 	activity tmp;
 
-	tmp.start = 0;
+	tmp.start = -1;
 	tmp.end = 0;
 	tmp.gain = 0;
 	activities.push_back(tmp); //esta actividad representa el estado en el que no se asigando ninguna actividad
@@ -32,6 +32,7 @@ int main()
 	edge tm;
 	char buf[10];
 	int n = activities.size();
+	int idcount = 0;
 	for (int i = 0; i < n; ++i)
 	{
 		for (int j = 0; j < n; ++j)
@@ -41,17 +42,18 @@ int main()
 				itoa(i,buf,10);
 				strcat(tm.source,buf);
 				strcpy(tm.target, "n");
-				itoa(i,buf,10);
+				itoa(j,buf,10);
 				strcat(tm.target,buf);
-				itoa(n*i+j,buf,10);
+				itoa(idcount,buf,10);
 				strcpy(tm.id,"e");
 				strcat(tm.id,buf);
-				edges.push_back(tm); 
+				edges.push_back(tm);
+				idcount++; 
 			}
 		}
 	}
 
-	int x = 3, y = 1;
+	int x = 0, y = 0, top = 5;
 	cout << "{\n\t\"nodes\": [";
 	for (int i = 0; i < n; ++i)
 	{	
@@ -62,7 +64,12 @@ int main()
 		cout << "\n\t\t\"size\":\"" << activities.at(i).gain << "\"\n\t}";
 		if(i < n - 1)
 			cout << ",";
-		y++;
+		if(x >= top){
+			x = 0;
+			y++;
+		}else{
+			x++;
+		}
 	}
 	cout << "\n\t],";
 
