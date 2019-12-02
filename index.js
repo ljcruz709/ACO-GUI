@@ -3,7 +3,7 @@ const bodyParser = require('body-parser')
 const path = require('path')
 
 const port = '8380'
-const messagePort = `Server started on http://localhost: ${port}`
+const messagePort = `Server started on http://localhost:${port}`
 
 const app = express()
 

@@ -1,13 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="css/bulma.css">
     <title>ACO-GUI</title>
 </head>
+
 <body>
-    HELLO WORLD
+    <div class="container has-text-centered">
+        <h1 class="title is-2"> ACO-GUI</h1>
+        <h1 class="subtitle is-3">Ant Colony optimization.</h1>
+        <div class="columns">
+            <div class="column is-three-fifths">
+                <article class="tile notification is-primary">
+                    <div id="container">
+
+                    </div>
+                </article>
+            </div>
+            <div class="column">
+                <article class="tile notification is-primary is-overlay">
+                    <p class="subtitle">Parametros</p>
+                </article>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="js/sigma.min.js"></script>
+    <script src="js/sigma.parsers.json.min.js"></script>
+
+    <script>
+        sigma.parsers.json('js/data.json', {
+            container: 'container',
+            settings: {
+                defaultNodeColor: '#ec5148'
+            }
+        });
+    </script>
+
 </body>
+
 </html>
