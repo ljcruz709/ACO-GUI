@@ -8035,9 +8035,12 @@ label.panel-block:hover {
 }
 
 #container {
-  max-width: 400px;
+  flex-grow: 1;
+  margin: 0 auto;
+  position: relative;
+  width: auto;
+  max-height: 400px;
   height: 400px;
-  margin: auto;
 }
 
 .column {
