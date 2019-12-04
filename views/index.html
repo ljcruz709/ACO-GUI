@@ -21,8 +21,7 @@
         <div class="columns">
             <div class="column">
                 <h3 class="subtitle">Parametros</h3>
-
-                <button class="button is-fullwidth is-outlined ">
+                <button id="id_btn_restart"class="button is-fullwidth is-outlined">
                     Reiniciar
                 </button>
                 <br>
@@ -72,12 +71,12 @@
                 <br>
                 <div class="columns">
                     <div class="column is-two-fifths">
-                        <button class="button is-fullwidth is-medium is-outlined">
+                        <button class="button is-fullwidth is-outlined">
                             Ejecutar
                         </button>
                     </div>
                     <div class="column">
-                        <button class="button is-fullwidth">
+                        <button class="button is-fullwidth is-outlined">
                             Paso a paso
                         </button>
                     </div>
@@ -126,8 +125,10 @@
     </div>
 
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="js/sigma.min.js"></script>
     <script src="js/plugins/sigma.parsers.json.min.js"></script>
+    <script src="js/request.js"></script>
 
     <script>
         sigma.parsers.json('activities-graph/graph.json', {
