@@ -78,6 +78,7 @@ int main()
 	{	
 		cout << "\n\t{\n\t\t\"id\":\"" << edges.at(i).id << "\",";
 		cout << "\n\t\t\"source\":\"" << edges.at(i).source << "\",";
+		cout << "\n\t\t\"label\":\"pheromone: 0.001\",";
 		cout << "\n\t\t\"target\":\"" << edges.at(i).target << "\"\n\t}";
 		if(i < edges.size() - 1)
 			cout << ",";

@@ -40,7 +40,10 @@
         sigma.parsers.json('activities-graph/graph.json', {
             container: 'container',
             settings: {
-                defaultNodeColor: '#FFFFFF'
+                defaultNodeColor: '#FFFFFF',
+                defaultEdgeType: 'arrow',
+                minArrowSize: 2,
+                drawEdgeLabels: true
             }
         });
     </script>
