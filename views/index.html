@@ -19,42 +19,17 @@
     <br>
     <div class="container">
         <div class="columns">
-            <div class="column">
+            <div id="params" class="column">
                 <h3 class="subtitle">Parametros</h3>
-                <button id="id_btn_restart"class="button is-fullwidth is-outlined">
+                <button id="id_btn_restart" class="button is-fullwidth is-outlined">
                     Reiniciar
                 </button>
+
                 <br>
 
-                <div class="columns">
-                    <div class="column is-two-fifths">
-                        <label class="label">Feromona Inicio</label>
-
-                    </div>
-                    <div class="column">
-                        <input class="input " type="text" placeholder="e.g. 0.01">
-                    </div>
-                </div>
-                <div class="columns">
-                    <div class="column is-two-fifths">
-                        <label class="label"># Hormigas</label>
-
-                    </div>
-                    <div class="column">
-                        <input class="input" type="text" placeholder="e.g. Número de hormigas">
-                    </div>
-                </div>
-                <div class="columns">
-                    <div class="column is-two-fifths">
-                        <label class="label">Iteraciones máx.</label>
-                    </div>
-                    <div class="column">
-                        <input class="input " type="text" placeholder="e.g. De Iteraciones">
-                    </div>
-                </div>
                 <div class="file has-name">
                     <label class="file-label">
-                        <input class="file-input" type="file" name="resume">
+                        <input v-on:change="uploadJson" id="file" class="file-input" type="file" name="resume">
                         <span class="file-cta">
                             <span class="file-icon">
                                 <i class="fas fa-upload"></i>
@@ -63,15 +38,45 @@
                                 Cargar JSON…
                             </span>
                         </span>
-                        <span class="file-name">
-                            Screen Shot 2017-07-29 at 15.54.25.png
+                        <span v-if="file" class="file-name">
+                           {{fileName}}
                         </span>
                     </label>
                 </div>
+
+                <br>
+
+                <div class="columns">
+                    <div class="column is-two-fifths">
+                        <label class="label">Feromona Inicio</label>
+
+                    </div>
+                    <div class="column">
+                        <input v-model="initial_pheromone" class="input " type="number">
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column is-two-fifths">
+                        <label class="label"># Hormigas</label>
+
+                    </div>
+                    <div class="column">
+                        <input v-model="ants_per_iteration" class="input" type="number">
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column is-two-fifths">
+                        <label class="label">Iteraciones máx.</label>
+                    </div>
+                    <div class="column">
+                        <input v-model="max_iterations" class="input " type="number">
+                    </div>
+                </div>
+               
                 <br>
                 <div class="columns">
                     <div class="column is-two-fifths">
-                        <button class="button is-fullwidth is-outlined">
+                        <button v-on:click="sendParams" class="button is-fullwidth is-outlined">
                             Ejecutar
                         </button>
                     </div>
@@ -121,12 +126,12 @@
         </div>
 
     </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <script src="js/jquery.min.js"></script>
     <script src="js/sigma.min.js"></script>
     <script src="js/plugins/sigma.parsers.json.min.js"></script>
-    <script src="js/request.js"></script>
+    <script src="js/app.js"></script>
 
     <script>
         sigma.parsers.json('activities-graph/graph.json', {
