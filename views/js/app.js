@@ -6,14 +6,16 @@ let app = new Vue({
         max_iterations: 0,
         minimize: true,
         file: false,
-        fileName: "graph.json"
+        fileName: "graph.json",
+        graph: false
     },
     methods: {
         sendParams: function () {
             let request = {
                 initial_pheromone: this.initial_pheromone,
                 ants_per_iteration: this.ants_per_iteration,
-                max_iterations: this.max_iterations
+                max_iterations: this.max_iterations,
+                minimize: this.minimize
             }
             axios
                 .post('http://localhost:8380/', request)
@@ -30,8 +32,12 @@ let app = new Vue({
                         'Content-Type': 'application/json'
                     }
                 })
-                .then(response =>(alert(response.status)))
+                .then(response => {
+                    this.graph = response["status_file"] == true ? true : false
+                    alert(graph)
+                })
 
-        }
+        },
+       
     }
 })

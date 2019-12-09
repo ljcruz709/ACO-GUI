@@ -35,11 +35,11 @@
                                 <i class="fas fa-upload"></i>
                             </span>
                             <span class="file-label">
-                                Cargar JSON…
+                                Cargar grafo en archivo JSON…
                             </span>
                         </span>
                         <span v-if="file" class="file-name">
-                           {{fileName}}
+                            {{fileName}}
                         </span>
                     </label>
                 </div>
@@ -72,7 +72,7 @@
                         <input v-model="max_iterations" class="input " type="number">
                     </div>
                 </div>
-               
+
                 <br>
                 <div class="columns">
                     <div class="column is-two-fifths">
@@ -87,11 +87,14 @@
                     </div>
                 </div>
             </div>
+
+
             <div class="column">
                 <article id="container" class="tile notification is-primary">
-
                 </article>
             </div>
+
+
             <div class="column">
                 <h3 class="subtitle">Salidas</h3>
                 <div class="columns">
@@ -126,8 +129,8 @@
                 </div>
             </div>
         </div>
-
     </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
@@ -136,13 +139,14 @@
     <script src="js/app.js"></script>
 
     <script>
-        sigma.parsers.json('activities-graph/graph.json', {
+        sigma.parsers.json('js/graph.json', {
             container: 'container',
             settings: {
                 defaultNodeColor: '#FFFFFF'
             }
         });
     </script>
+
 
 </body>
 
