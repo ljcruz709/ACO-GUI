@@ -142,7 +142,10 @@
         sigma.parsers.json('js/graph.json', {
             container: 'container',
             settings: {
-                defaultNodeColor: '#FFFFFF'
+                defaultNodeColor: '#FFFFFF',
+                defaultEdgeType: 'arrow',
+                minArrowSize: 2,
+                drawEdgeLabels: true
             }
         });
     </script>
