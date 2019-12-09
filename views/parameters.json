@@ -1,0 +1,6 @@
+{
+    "initial_pheromone" : 0.001,
+    "max_iterations" : 25,
+    "ants_per_iteration" : 16,
+    "minimize" : true
+}

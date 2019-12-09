@@ -5,6 +5,7 @@ std::ofstream cout("graph.json");
 
 struct edge{
 	char source[4], target[4], id[4];
+	int weight;
 };
 
 struct activity
@@ -47,6 +48,7 @@ int main()
 				itoa(idcount,buf,10);
 				strcpy(tm.id,"e");
 				strcat(tm.id,buf);
+				tm.weight = activities.at(j).gain;
 				edges.push_back(tm);
 				idcount++; 
 			}
@@ -77,8 +79,9 @@ int main()
 	for (int i = 0; i < edges.size(); ++i)
 	{	
 		cout << "\n\t{\n\t\t\"id\":\"" << edges.at(i).id << "\",";
-		cout << "\n\t\t\"source\":\"" << edges.at(i).source << "\",";
 		cout << "\n\t\t\"label\":\"pheromone: 0.001\",";
+		cout << "\n\t\t\"weight\": "<< edges.at(i).weight<< ",";
+		cout << "\n\t\t\"source\":\"" << edges.at(i).source << "\",";
 		cout << "\n\t\t\"target\":\"" << edges.at(i).target << "\"\n\t}";
 		if(i < edges.size() - 1)
 			cout << ",";

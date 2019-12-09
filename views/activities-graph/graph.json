@@ -74,140 +74,163 @@
 	"edges": [
 	{
 		"id":"e0",
-		"source":"n0",
 		"label":"pheromone: 0.001",
+		"weight": 10,
+		"source":"n0",
 		"target":"n1"
 	},
 	{
 		"id":"e1",
-		"source":"n0",
 		"label":"pheromone: 0.001",
+		"weight": 5,
+		"source":"n0",
 		"target":"n2"
 	},
 	{
 		"id":"e2",
-		"source":"n0",
 		"label":"pheromone: 0.001",
+		"weight": 10,
+		"source":"n0",
 		"target":"n3"
 	},
 	{
 		"id":"e3",
-		"source":"n0",
 		"label":"pheromone: 0.001",
+		"weight": 4,
+		"source":"n0",
 		"target":"n4"
 	},
 	{
 		"id":"e4",
-		"source":"n0",
 		"label":"pheromone: 0.001",
+		"weight": 5,
+		"source":"n0",
 		"target":"n5"
 	},
 	{
 		"id":"e5",
-		"source":"n0",
 		"label":"pheromone: 0.001",
+		"weight": 9,
+		"source":"n0",
 		"target":"n6"
 	},
 	{
 		"id":"e6",
-		"source":"n0",
 		"label":"pheromone: 0.001",
+		"weight": 1,
+		"source":"n0",
 		"target":"n7"
 	},
 	{
 		"id":"e7",
-		"source":"n0",
 		"label":"pheromone: 0.001",
+		"weight": 7,
+		"source":"n0",
 		"target":"n8"
 	},
 	{
 		"id":"e8",
-		"source":"n0",
 		"label":"pheromone: 0.001",
+		"weight": 3,
+		"source":"n0",
 		"target":"n9"
 	},
 	{
 		"id":"e9",
-		"source":"n1",
 		"label":"pheromone: 0.001",
+		"weight": 10,
+		"source":"n1",
 		"target":"n3"
 	},
 	{
 		"id":"e10",
-		"source":"n1",
 		"label":"pheromone: 0.001",
+		"weight": 4,
+		"source":"n1",
 		"target":"n4"
 	},
 	{
 		"id":"e11",
-		"source":"n1",
 		"label":"pheromone: 0.001",
+		"weight": 9,
+		"source":"n1",
 		"target":"n6"
 	},
 	{
 		"id":"e12",
-		"source":"n1",
 		"label":"pheromone: 0.001",
+		"weight": 1,
+		"source":"n1",
 		"target":"n7"
 	},
 	{
 		"id":"e13",
-		"source":"n1",
 		"label":"pheromone: 0.001",
+		"weight": 7,
+		"source":"n1",
 		"target":"n8"
 	},
 	{
 		"id":"e14",
-		"source":"n1",
 		"label":"pheromone: 0.001",
+		"weight": 3,
+		"source":"n1",
 		"target":"n9"
 	},
 	{
 		"id":"e15",
-		"source":"n2",
 		"label":"pheromone: 0.001",
+		"weight": 1,
+		"source":"n2",
 		"target":"n7"
 	},
 	{
 		"id":"e16",
-		"source":"n3",
 		"label":"pheromone: 0.001",
+		"weight": 1,
+		"source":"n3",
 		"target":"n7"
 	},
 	{
 		"id":"e17",
-		"source":"n3",
 		"label":"pheromone: 0.001",
+		"weight": 3,
+		"source":"n3",
 		"target":"n9"
 	},
 	{
 		"id":"e18",
-		"source":"n4",
 		"label":"pheromone: 0.001",
+		"weight": 1,
+		"source":"n4",
 		"target":"n7"
 	},
 	{
 		"id":"e19",
-		"source":"n5",
 		"label":"pheromone: 0.001",
+		"weight": 9,
+		"source":"n5",
 		"target":"n6"
 	},
 	{
 		"id":"e20",
-		"source":"n5",
 		"label":"pheromone: 0.001",
+		"weight": 1,
+		"source":"n5",
 		"target":"n7"
 	},
 	{
 		"id":"e21",
-		"source":"n5",
 		"label":"pheromone: 0.001",
+		"weight": 3,
+		"source":"n5",
 		"target":"n9"
 	},
 	{
 		"id":"e22",
-		"source":"n8",
 		"label":"pheromone: 0.001",
+		"weight": 1,
+		"source":"n8",
 		"target":"n7"
 	}
 	]

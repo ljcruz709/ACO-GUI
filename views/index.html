@@ -14,27 +14,119 @@
     <div class="container has-text-centered">
         <h1 class="title is-2"> ACO-GUI</h1>
         <h1 class="subtitle is-3">Colonia de Hormigas</h1>
+
+    </div>
+    <br>
+    <div class="container">
         <div class="columns">
             <div class="column">
-                <article class="tile notification is-primary is-overlay">
+                <h3 class="subtitle">Parametros</h3>
+                <button id="id_btn_restart"class="button is-fullwidth is-outlined">
+                    Reiniciar
+                </button>
+                <br>
 
-                    <h3 class="subtitle">Parametros</h3>
-                </article>
+                <div class="columns">
+                    <div class="column is-two-fifths">
+                        <label class="label">Feromona Inicio</label>
+
+                    </div>
+                    <div class="column">
+                        <input class="input " type="text" placeholder="e.g. 0.01">
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column is-two-fifths">
+                        <label class="label"># Hormigas</label>
+
+                    </div>
+                    <div class="column">
+                        <input class="input" type="text" placeholder="e.g. Número de hormigas">
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column is-two-fifths">
+                        <label class="label">Iteraciones máx.</label>
+                    </div>
+                    <div class="column">
+                        <input class="input " type="text" placeholder="e.g. De Iteraciones">
+                    </div>
+                </div>
+                <div class="file has-name">
+                    <label class="file-label">
+                        <input class="file-input" type="file" name="resume">
+                        <span class="file-cta">
+                            <span class="file-icon">
+                                <i class="fas fa-upload"></i>
+                            </span>
+                            <span class="file-label">
+                                Cargar JSON…
+                            </span>
+                        </span>
+                        <span class="file-name">
+                            Screen Shot 2017-07-29 at 15.54.25.png
+                        </span>
+                    </label>
+                </div>
+                <br>
+                <div class="columns">
+                    <div class="column is-two-fifths">
+                        <button class="button is-fullwidth is-outlined">
+                            Ejecutar
+                        </button>
+                    </div>
+                    <div class="column">
+                        <button class="button is-fullwidth is-outlined">
+                            Paso a paso
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="container" class="tile notification is-primary">
 
             </div>
-            <div class="column is-three-fifths" style="height: 600px;">
-                <article id="container" class="tile notification is-primary">
+            <div class="column">
+                <h3 class="subtitle">Salidas</h3>
+                <div class="columns">
+                    <div class="column is-two-fifths">
+                        <label class="label">Iteración actual</label>
+                    </div>
+                    <div class="column">
+                        <input class="input " type="text" placeholder="e.g. De Iteraciones">
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column is-two-thirds">
+                        <label class="label">Mejor global</label>
+                        <input class="input " type="text" placeholder="e.g. De Iteraciones">
 
-                </article>
+                    </div>
+                    <div class="column">
+                        <label class="label">Z</label>
+                        <input class="input " type="text" placeholder="e.g. De Iteraciones">
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column is-two-thirds">
+                        <label class="label">Mejor actual</label>
+                        <input class="input " type="text" placeholder="e.g. De Iteraciones">
 
+                    </div>
+                    <div class="column">
+                        <label class="label">Z</label>
+                        <input class="input " type="text" placeholder="e.g. De Iteraciones">
+                    </div>
+                </div>
             </div>
         </div>
 
     </div>
 
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="js/sigma.min.js"></script>
     <script src="js/plugins/sigma.parsers.json.min.js"></script>
+    <script src="js/request.js"></script>
 
     <script>
         sigma.parsers.json('activities-graph/graph.json', {
