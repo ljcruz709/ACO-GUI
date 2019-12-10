@@ -2,5 +2,7 @@
     "initial_pheromone" : 0.001,
     "max_iterations" : 25,
     "ants_per_iteration" : 16,
-    "minimize" : true
+    "minimize" : false,
+    "alpha" : 0.5, 
+    "beta" : 0.5 
 }

@@ -30,6 +30,7 @@ let storage = multer.diskStorage({
 
 let upload = multer({ storage: storage })
 
+
 app.get('/', (req, res) => {
     res.send(index)
 })
@@ -39,13 +40,17 @@ app.post('/', (req, res) => {
         initial_pheromone: 0,
         ants_per_iteration: 0,
         max_iterations: 0,
-        minimize: false
+        minimize: false,
+        alpha: 0,
+        beta: 0
     }
 
     obj["initial_pheromone"] = req.body["initial_pheromone"]
     obj["ants_per_iteration"] = req.body["ants_per_iteration"]
     obj["max_iterations"] = req.body["max_iterations"]
     obj["minimize"] = req.body["minimize"]
+    obj["alpha"] = req.body["alpha"]
+    obj["beta"] = req.body["beta"]
 
     const tmp = JSON.parse(fs.readFileSync(__dirname + '/views/js/graph.json'))
 
@@ -57,21 +62,24 @@ app.post('/', (req, res) => {
         tmp2.neighborhood_size = 0
         tmp2.neighborhood = []
         tmp2.costs = []
+        tmp2.pheromone = []
         tmp["edges"].forEach(edge => {
             if (edge.source === ("n" + parseInt(count))){
                 tmp2.costs.push(edge.weight)
                 tmp2.neighborhood.push(parseInt(edge.target[1]))
                 tmp2.neighborhood_size = tmp2.neighborhood_size + 1
+                tmp2.pheromone.push(obj.initial_pheromone)
             }
         })
         graph.push(tmp2)
         count = count + 1
     })
     
-    console.log(graph)
+    for(let i = 0; i< obj.max_iterations; i++){
+        graph = iterate(graph, obj) 
+    }
 
-
-    res.send(graph)
+    
 })
 
 app.post('/json', upload.single('graph.json'), (req, res, next) => {
